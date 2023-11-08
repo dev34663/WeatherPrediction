@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    background: url(C:\\Users\\dev\\Downloads\\m.jpg);
+    background-attachment: fixed;
+    background-size: 100% 110%;
+    padding: 20px 70px;
+    height: 400px;
+    color: #fff;
+    background-position: center top -150px; /* Adjust the -10px value to move the image slightly up */
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-container{
+    margin-top: 50px;
+    /* font-weight: 200; */
+}
+
+.date-container .time{
+    font-size: 70px;
+    color: black;
+    font-weight: 200;
+
+}
+
+.date-container #am-pm{
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+    color: black;
+    font-weight: 200;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid gray;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-forecast{
+    background: #3c3c44;
+    padding: 10px;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+}
+
+.future-forecast .day{
+    padding: 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 5px;
+    border-radius: 10px;
+    padding: 15px;
+    background: gray;
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+}
+
+@media only screen and (max-width:730px) {
+    .container{
+        padding: 20px;
+    }
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+    .future-forecast .today .temp{
+        font-size: 23px;
+    }
+    .date-container .time{
+        font-size: 50px;
+    }
+    .date-container #am-pm{
+        font-size: 20px;
+    }
+    .date-container .date{
+        font-size: 20px;
+    }
+    .place-container{
+        text-align: end;
+        margin-top: 15px;
+    }
+    .place-container .time-zone{
+        font-size: 20px;
+    }
+    .current-info .others{
+        padding: 12px;
+    }
+    .current-info .others .weather-item{
+        font-size: 14px;
+    }
+}
+/* Styling for the suggestion box */
+.suggestion-box {
+  border: 1px solid darkgray;
+  padding: 15px;
+  margin-top: 10px;
+  margin: 30px;
+  width: 50%;
+  height: 410px;
+  background-color: grey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+/* Styling for the title */
+.suggestion-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #ffff;
+}
+
+/* Styling for each suggestion item */
+.suggestion-item {
+    margin-bottom: 15px;
+    background: #3c3c44;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Example suggestion item level colors */
+.suggestion-category {
+  font-weight: bold;
+  margin-bottom: 5px; 
+  margin-right: 20px;
+}
+
+.suggestion-text {
+  font-size: 18px;
+  color: white; /* Set the text color to white */
+}
+
+.marquee-container {
+    background-color: #FF4141;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.marquee-text {
+    font-size: 14px;
+    color: #000000;
+    padding: 0px;
+}
+
+/* Style for the Prediction section */
+.prediction-section {
+    background-color: darkgray; /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    margin: 30px;
+    width: 50%;
+    height: 410px;
+}
+
+
+
+/* Additional styles for the Prediction section, modify as needed */
+.prediction-section h2 {
+    color: white; /* Heading text color */
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 10px;
+    margin-left: 10PX;
+}
+
+.container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.login-section {
+    width: 50%;
+    margin:30px;
+    background-color: lightgrey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.login-section h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.login-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-section input[type="text"],
+.login-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid  #3c3c44;
+    border-radius: 20px;
+}
+
+.login-section button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-section button:hover {
+    background-color: #0056b3;
+}
+.form-group{
+    color: #3c3c44;
+    font-size: 14px;
+}
+.container-3{
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.weather-alerts-container{
+    margin: 30px;
+    background-color: lightgrey;
+    padding: 20px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.register-form h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+    background-size: cover;
+    background-position: center;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.register-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    backdrop-filter: blur(4px); /* Apply blur effect */
+}
+
+.register-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.register-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.register-container a {
+    text-decoration: none;
+    color: #0078D4;
+}
+
+.register-container p {
+    text-align: center;
+}
+
+
+.success-message {
+    background-color: #4CAF50; /* Green background for success message */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #f44336; /* Red background for error message */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+ button#generate-pdf-button{
+      background-color: #0078D4; /* Background color for the button */
+      color: #fff; /* Text color */
+      border: none; /* Remove the border */
+      border-radius: 20px; /* Add rounded corners */
+      padding: 10px 20px; /* Padding around the text */
+      font-size: 16px; /* Text size */
+      cursor: pointer; /* Show a pointer cursor on hover */
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Style for when the button is hovered over */
+    button#generate-pdf-button:hover {
+      background-color: #0056b3; /* Change the background color on hover */
+    }
+ h1 {
+      font-size: 24px; /* Adjust the font size as needed */
+      color: #333; /* Text color for the heading */
+   /* Spacing at the bottom of the heading */
+     margin-top: 30px;
+     margin-left: 60px;
+    }
